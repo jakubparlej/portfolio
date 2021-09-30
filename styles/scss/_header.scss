@@ -3,7 +3,11 @@
   justify-content: space-between;
   align-items: center;
   height: 6rem;
-  background-color: $black;
+  z-index: 99;
+
+  @include breakpoint-up(md) {
+    height: 10rem;
+  }
 
   &__logo {
     display: grid;
@@ -13,6 +17,10 @@
 
 .menu-btn {
   width: 32px;
+
+  @include breakpoint-up(md) {
+    display: none;
+  }
 
   > span {
     display: block;
@@ -33,5 +41,19 @@
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+  }
+}
+
+.nav {
+  @include breakpoint-down(md) {
+    display: none;
+  }
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 2rem;
+    font-size: 1rem;
   }
 }

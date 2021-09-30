@@ -5,12 +5,24 @@
   height: 100vh;
   margin-top: -6rem;
 
+  @include breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+  }
+
   &__text {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
     padding-bottom: 8rem;
     z-index: 1;
+
+    @include breakpoint-up(md) {
+      align-content: center;
+      justify-content: flex-start;
+      padding-top: 6rem;
+      padding-right: 14rem;
+    }
   }
 
   &__img {
@@ -20,6 +32,15 @@
       top: 45vh;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      @include breakpoint-up(md) {
+        position: relative;
+        width: 30vw;
+        top: 2rem;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
     }
   }
 
