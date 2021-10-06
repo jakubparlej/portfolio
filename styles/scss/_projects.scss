@@ -1,0 +1,53 @@
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-nav {
+  display: flex;
+}
+
+.swiper-button {
+  color: $white;
+  width: 3rem;
+  height: 3rem;
+  background-color: $darkGray;
+  margin-top: 1.5rem;
+  border: none;
+  display: grid;
+  place-content: center;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.project {
+  text-align: left;
+
+  &__img {
+    height: 221px;
+    background: url("../../images/artvideo.png");
+    background-position: top left;
+    background-size: cover;
+  }
+
+  &__desc {
+    background-color: $darkGray;
+    padding: 2rem 1.5rem;
+  }
+
+  &__title {
+    font-size: 0.875rem;
+    color: $gray;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    line-height: 110%;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}

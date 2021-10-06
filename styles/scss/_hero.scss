@@ -1,8 +1,7 @@
 .hero {
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   align-content: flex-end;
-  height: 100vh;
   margin-top: -6rem;
 
   @include breakpoint-up(md) {

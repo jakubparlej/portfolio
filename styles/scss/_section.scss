@@ -1,0 +1,62 @@
+.section {
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: flex-start;
+
+  @include breakpoint-up(md) {
+    grid-template-columns: 50% 50%;
+    align-content: center;
+  }
+
+  &__column1 {
+    @include breakpoint-up(md) {
+      margin-right: 2rem;
+      justify-content: flex-start;
+    }
+  }
+
+  &__column2 {
+    margin-top: 3rem;
+
+    @include breakpoint-up(md) {
+      margin-right: 2rem;
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    color: $green;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    > span {
+      display: flex;
+      width: 2rem;
+      height: 2px;
+      margin-right: 1rem;
+      background: $green;
+    }
+  }
+
+  &__desc {
+    color: $gray;
+    margin-top: 1.5rem;
+  }
+}
+
+.icons {
+  margin-top: 2rem;
+
+  > a {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

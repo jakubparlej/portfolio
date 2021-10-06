@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jakub Parlej - Web Developer</title>
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="styles/css/main.css" />
   </head>
   <body>
@@ -50,6 +55,61 @@
           <img class="jacob" src="images/jacob-test.png" alt="" />
         </div>
       </section>
+      <section class="container section">
+        <div class="section__column1">
+          <p class="section__title"><span class="line"></span> Projects</p>
+          <h2>Check out some of my latest projects</h2>
+          <p class="section__desc">If you want to see all of my projects you can check them out here:</p>
+          <div class="icons">
+            <a href="#">
+              <img src="images/behance-logo.svg" alt="Behance">
+            </a>
+            <a href="#">
+              <img src="images/dribbble-logo.svg" alt="Dribble">
+            </a>
+            <a href="#">
+              <img src="images/github-logo.svg" alt="Github">
+            </a>
+          </div>
+        </div>
+        <div class="section__column2">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="project">
+                  <div class="project__img">
+                  </div>
+                  <div class="project__desc">
+                    <p class="project__title">www.podkalickivideo.pl</p>
+                    <h3 class="project__name">Website for wedding videographer</h3>
+                    <a href="#" class="project__link underline">Check out this project</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/artvideo.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/artvideo.png" alt="">
+              </div>
+              ...
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-nav">
+              <button id="prev" class="swiper-button">
+                <img src="images/arrow-left.svg" alt="">
+              </button>
+              <button id="next" class="swiper-button">
+                <img src="images/arrow-right.svg" alt="">
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </section>  
     </main>
     <div id="main"></div>
     <script src="scripts/main.js"></script>
