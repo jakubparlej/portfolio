@@ -17,11 +17,9 @@
 
   &__column1 {
     @include breakpoint-up(md) {
-      display: flex;
-      margin-right: 3rem;
-      justify-content: flex-start;
+      display: grid;
       align-content: center;
-      flex-wrap: wrap;
+      margin-right: 3rem;
     }
   }
 
@@ -29,11 +27,9 @@
     margin-top: 3rem;
 
     @include breakpoint-up(md) {
-      display: flex;
-      margin-left: 3rem;
-      justify-content: flex-start;
+      display: grid;
       align-content: center;
-      flex-wrap: wrap;
+      margin-left: 3rem;
       margin-top: 0;
     }
   }

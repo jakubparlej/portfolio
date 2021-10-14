@@ -22,7 +22,7 @@ html {
   box-sizing: border-box;
 
   @include breakpoint-up(md) {
-    overflow: hidden;
+    // overflow: hidden;
   }
 }
 
@@ -136,6 +136,12 @@ h2 {
   @include breakpoint-up(lg) {
     font-size: 3rem;
   }
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: $white;
+  margin-top: 1.25rem;
 }
 
 p {

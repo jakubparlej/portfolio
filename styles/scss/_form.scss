@@ -1,0 +1,34 @@
+.form {
+  &__label {
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: $darkTransparent;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: $white;
+    outline: none;
+    font-family: "Poppins";
+    font-size: 1rem;
+    border: 1px solid transparent;
+    margin-bottom: 1.5rem;
+
+    &:focus {
+      border: 1px solid $darkGray;
+    }
+  }
+
+  &__submit {
+    background-color: $darkTransparent;
+    border: none;
+    padding: 1.25rem;
+    color: $white;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+}

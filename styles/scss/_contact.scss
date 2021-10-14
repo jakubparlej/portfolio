@@ -1,0 +1,13 @@
+.contact-links {
+  margin-top: 2.5rem;
+
+  @include breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-link {
+  color: $gray;
+  font-size: 1rem;
+}
