@@ -2,16 +2,26 @@
   display: grid;
   grid-template-columns: 100%;
   align-content: flex-start;
+  margin-top: 10rem;
+
+  @include breakpoint-up(sm) {
+    margin-top: 0rem;
+  }
 
   @include breakpoint-up(md) {
     grid-template-columns: 50% 50%;
+    padding-top: 8rem;
+    height: 100vh;
     align-content: center;
   }
 
   &__column1 {
     @include breakpoint-up(md) {
-      margin-right: 2rem;
+      display: flex;
+      margin-right: 3rem;
       justify-content: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
     }
   }
 
@@ -19,7 +29,11 @@
     margin-top: 3rem;
 
     @include breakpoint-up(md) {
-      margin-right: 2rem;
+      display: flex;
+      margin-left: 3rem;
+      justify-content: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
       margin-top: 0;
     }
   }
@@ -42,21 +56,5 @@
   &__desc {
     color: $gray;
     margin-top: 1.5rem;
-  }
-}
-
-.icons {
-  margin-top: 2rem;
-
-  > a {
-    opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
-    &:not(:last-child) {
-      margin-right: 2rem;
-    }
   }
 }

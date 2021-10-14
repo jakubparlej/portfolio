@@ -1,0 +1,56 @@
+.tech-title {
+  font-size: 1.25rem;
+}
+
+.tech-grid {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint-up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpoint-up(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.tech {
+  width: 100%;
+  height: auto;
+  display: grid;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  color: $gray;
+
+  &:hover {
+    background-color: darken($darkGray, 10%);
+  }
+}
+
+.tech-icon {
+  font-size: 3rem;
+  margin-bottom: 0.625rem;
+}
+
+.tech-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+#html:hover {
+  color: #e54c21;
+}
+
+#css:hover {
+  color: #018fd5;
+}
+
+#js:hover {
+  color: #ead41c;
+}

@@ -2,25 +2,22 @@
   display: grid;
   grid-template-columns: 1fr;
   align-content: flex-end;
-  margin-top: -6rem;
 
   @include breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
     align-content: center;
+    padding-top: 8rem;
   }
 
   &__text {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
-    padding-bottom: 8rem;
     z-index: 1;
 
     @include breakpoint-up(md) {
       align-content: center;
       justify-content: flex-start;
-      padding-top: 6rem;
-      padding-right: 14rem;
     }
   }
 

@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jakub Parlej - Web Developer</title>
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-/>
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/css/main.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/4329a56ae7.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -21,7 +19,7 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item underline">
-              <a  href="#">Portfolio</ac>
+              <a  href="#">Portfolio</a>
             </li>
             <li class="nav__item underline">
               <a href="#">About me</a>
@@ -37,7 +35,7 @@
         </a>
       </div>
     </header>
-    <main>
+    <main id="root">
       <section class="container hero">
         <div class="hero__text">
           <h1>Hello, <br />I'm Jacob</h1>
@@ -57,10 +55,11 @@
       </section>
       <section class="container section">
         <div class="section__column1">
-          <p class="section__title"><span class="line"></span> Projects</p>
+          <p class="section__title"><span class="line"></span>Portfolio</p>
           <h2>Check out some of my latest projects</h2>
+          <p class="section__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iste nobis dignissimos modi placeat voluptatum quas fuga quia nisi similique temporibus doloremque incidunt minus, veniam quos fugiat suscipit nesciunt soluta!</p>
           <p class="section__desc">If you want to see all of my projects you can check them out here:</p>
-          <div class="icons">
+          <div class="tech-icons">
             <a href="#">
               <img src="images/behance-logo.svg" alt="Behance">
             </a>
@@ -90,15 +89,30 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <img src="images/artvideo.png" alt="">
+                <div class="project">
+                  <div class="project__img">
+                  </div>
+                  <div class="project__desc">
+                    <p class="project__title">www.podkalickivideo.pl</p>
+                    <h3 class="project__name">Website for wedding videographer</h3>
+                    <a href="#" class="project__link underline">Check out this project</a>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide">
-                <img src="images/artvideo.png" alt="">
+                <div class="project">
+                  <div class="project__img">
+                  </div>
+                  <div class="project__desc">
+                    <p class="project__title">www.podkalickivideo.pl</p>
+                    <h3 class="project__name">Website for wedding videographer</h3>
+                    <a href="#" class="project__link underline">Check out this project</a>
+                  </div>
+                </div>
               </div>
-              ...
             </div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-nav">
+          </div>
+          <div class="swiper-nav">
               <button id="prev" class="swiper-button">
                 <img src="images/arrow-left.svg" alt="">
               </button>
@@ -106,10 +120,90 @@
                 <img src="images/arrow-right.svg" alt="">
               </button>
             </div>
-            
+        </div>
+      </section>
+      <section class="container section">
+        <div class="section__column1">
+          <p class="section__title"><span class="line"></span>About me</p>
+          <h2>I design and create websites with passion</h2>
+          <p class="section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Curabitur aliquet ante id aliquam ultricies. Aenean scelerisque lectus sit amet 
+            ligula dignissim varius. Suspendisse venenatis condimentum erat vitae aliquet.</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f social-icon"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram social-icon"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin social-icon"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-behance social-icon"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-dribbble social-icon"></i>
+            </a>
           </div>
         </div>
-      </section>  
+        <div class="section__column2">
+          <img style="width: 100%;" src="images/macbook.jpg" alt="Mackbook">
+        </div>
+      </section>
+      <section class="container section">
+        <div class="section__column1">
+          <p class="section__title"><span class="line"></span>Skills & Technologies</p>
+          <h2>Technologies that I use to create websites</h2>
+          <p class="section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet ante id aliquam ultricies. Aenean scelerisque lectus sit amet ligula dignissim varius. Suspendisse venenatis condimentum erat vitae aliquet.</p>
+        </div>
+        <div class="section__column2">
+          <div class="tech-title">Web development</div>
+          <div class="tech-grid">
+            <div class="tech" id="html">
+              <i class="fab fa-html5 tech-icon"></i>
+              <span class="tech-name">HTML5</span>
+            </div>
+            <div class="tech" id="css">
+              <i class="fab fa-css3-alt tech-icon"></i>
+              <span class="tech-name">CSS3</span>
+            </div>
+            <div class="tech" id="js">
+              <i class="fab fa-js tech-icon"></i>
+              <span class="tech-name">JavaScript</span>
+            </div>
+            <div class="tech" id="html">
+              <i class="fab fa-html5 tech-icon"></i>
+              <span class="tech-name">HTML5</span>
+            </div>
+            <div class="tech" id="css">
+              <i class="fab fa-css3-alt tech-icon"></i>
+              <span class="tech-name">CSS3</span>
+            </div>
+            <div class="tech" id="js">
+              <i class="fab fa-js tech-icon"></i>
+              <span class="tech-name">JavaScript</span>
+            </div>
+          </div>
+          <div class="tech-title">Tools</div>
+          <div class="tech-grid">
+            <div class="tech" id="html">
+              <i class="fab fa-html5 tech-icon"></i>
+              <span class="tech-name">HTML5</span>
+            </div>
+            <div class="tech" id="css">
+              <i class="fab fa-css3-alt tech-icon"></i>
+              <span class="tech-name">CSS3</span>
+            </div>
+            <div class="tech" id="js">
+              <i class="fab fa-js tech-icon"></i>
+              <span class="tech-name">JavaScript</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </main>
     <div id="main"></div>
     <script src="scripts/main.js"></script>

@@ -20,6 +20,10 @@ html {
   font-size: 16px;
   font-family: "Poppins";
   box-sizing: border-box;
+
+  @include breakpoint-up(md) {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -117,10 +121,10 @@ h1 {
   letter-spacing: -5px;
   font-weight: 600;
   line-height: 85%;
-  padding-right: 100px;
 
   @include breakpoint-up(lg) {
-    font-size: 6.25rem;
+    font-size: 8rem;
+    font-weight: 700;
   }
 }
 
@@ -128,6 +132,10 @@ h2 {
   font-size: 2.25rem;
   line-height: 110%;
   margin-top: 1rem;
+
+  @include breakpoint-up(lg) {
+    font-size: 3rem;
+  }
 }
 
 p {

@@ -1,6 +1,5 @@
 .swiper {
   width: 100%;
-  height: auto;
 }
 
 .swiper-nav {
@@ -11,13 +10,28 @@
   color: $white;
   width: 3rem;
   height: 3rem;
-  background-color: $darkGray;
+  background-color: rgba(150, 150, 150, 0.1);
   margin-top: 1.5rem;
   border: none;
   display: grid;
   place-content: center;
   margin-right: 0.5rem;
   cursor: pointer;
+
+  img {
+    width: 1.5rem;
+
+    @include breakpoint-up(md) {
+      width: 2.5rem;
+    }
+  }
+
+  @include breakpoint-up(md) {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+  }
 }
 
 .project {
@@ -28,26 +42,64 @@
     background: url("../../images/artvideo.png");
     background-position: top left;
     background-size: cover;
+
+    @include breakpoint-up(md) {
+      height: 350px;
+    }
   }
 
   &__desc {
-    background-color: $darkGray;
+    background-color: rgba(150, 150, 150, 0.1);
     padding: 2rem 1.5rem;
+
+    @include breakpoint-up(md) {
+      padding: 2.25rem 3rem;
+    }
   }
 
   &__title {
     font-size: 0.875rem;
     color: $gray;
+    text-transform: uppercase;
+
+    @include breakpoint-up(md) {
+      font-size: 1rem;
+    }
   }
 
   &__name {
     font-size: 1.5rem;
     margin-top: 0.5rem;
     line-height: 110%;
+    font-weight: 600;
+
+    @include breakpoint-up(md) {
+      font-size: 2rem;
+    }
   }
 
   &__link {
     display: inline-block;
     margin-top: 1rem;
+
+    @include breakpoint-up(md) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.tech-icons {
+  margin-top: 2rem;
+
+  > a {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
   }
 }
