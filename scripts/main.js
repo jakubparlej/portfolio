@@ -1,7 +1,6 @@
 // document.addEventListener("DOMContentLoaded", () => {
 //   const rootElement = document.querySelector("#root");
 //   const sections = document.querySelectorAll("section");
-//   // const footer = document.querySelector("footer");
 //   let currentSectionIndex = 0;
 //   let isThrottled = false;
 
@@ -34,12 +33,6 @@
 //       behavior: "smooth",
 //       block: "start",
 //     });
-
-//     // if (currentSectionIndex === sections.length - 1) {
-//     //   footer.classList.add("show");
-//     // } else {
-//     //   footer.classList.remove("show");
-//     // }
 //   });
 // });
 
@@ -54,4 +47,18 @@ const swiper = new Swiper(".swiper", {
     nextEl: "#next",
     prevEl: "#prev",
   },
+});
+
+// Menu trigger
+
+const menuBtn = document.getElementById("menuBtn");
+const navMobile = document.querySelector(".nav-mobile");
+const header = document.querySelector(".header");
+const body = document.querySelector("body");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("menu-btn--active");
+  navMobile.classList.toggle("nav-mobile--active");
+  header.classList.toggle("header--active");
+  body.classList.toggle("no-scroll");
 });

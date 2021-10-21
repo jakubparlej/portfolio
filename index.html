@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jakub Parlej - Web Developer</title>
+    <link rel="shorcut icon" type="image/png" href="images/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
@@ -20,6 +21,7 @@
       src="https://kit.fontawesome.com/4329a56ae7.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <header>
@@ -27,6 +29,22 @@
         <a class="header__logo" href="#">
           <img src="images/logo.svg" alt="J-Projects" />
         </a>
+        <nav class="nav-mobile">
+          <ul class="nav-mobile__list">
+            <li class="nav-mobile__item">
+              <a href="#">Portfolio</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#">About me</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#">Skills</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item underline">
@@ -41,8 +59,8 @@
           </ul>
         </nav>
         <a href="#" class="btn hide-for-mobile">Contact</a>
-        <a class="menu-btn" href="#">
-          <span></span><span></span><span></span>
+        <a id="menuBtn" class="menu-btn">
+          <span></span><span></span><span></span><span></span>
         </a>
       </div>
     </header>
@@ -57,14 +75,14 @@
           </p>
           <div class="scroll-icon">
             <img src="images/arrow-down.svg" alt="" />
-            <a href="#">See my work</a>
+            <a href="#portfolio">See my work</a>
           </div>
         </div>
         <div class="hero__img">
           <img class="jacob" src="images/jacob-test.png" alt="" />
         </div>
       </section>
-      <section class="container section">
+      <section id="portfolio" class="container section">
         <div class="section__column1">
           <p class="section__title"><span class="line"></span>Portfolio</p>
           <h2>Check out some of my latest projects</h2>
@@ -147,7 +165,7 @@
           </div>
         </div>
       </section>
-      <section class="container section">
+      <section id="about-me" class="container section">
         <div class="section__column1">
           <p class="section__title"><span class="line"></span>About me</p>
           <h2>I design and create websites with passion</h2>
@@ -184,7 +202,7 @@
           <img style="width: 100%" src="images/macbook.jpg" alt="Mackbook" />
         </div>
       </section>
-      <section class="container section">
+      <section id="skills" class="container section">
         <div class="section__column1">
           <p class="section__title">
             <span class="line"></span>Skills & Technologies
@@ -251,25 +269,39 @@
         </div>
       </section>
       <!-- Contact -->
-      <section class="container section">
+      <section id="contact" class="container section">
         <div class="section__column1">
           <p class="section__title"><span class="line"></span>Contact</p>
           <h2>Let's work together</h2>
+          <p class="section__desc">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+            nobis, magnam reiciendis enim impedit officiis pariatur nostrum.
+            Necessitatibus sequi et perspiciatis! Tenetur id eveniet doloribus
+            cupiditate animi aut sint amet.
+          </p>
           <div class="contact-links">
-            <h3>Call</h3>
-            <a class="contact-link section__desc">+48 510 602 612</a>
-            <h3>Write</h3>
-            <a class="contact-link section__desc">kontakt@jprojects.pl</a>
+            <div class="contact-links__column">
+              <p class="contact-links__name">Call</p>
+              <a class="contact-link section__desc">+48 510 602 612</a>
+            </div>
+            <div class="contact-links__column">
+              <p class="contact-links__name">Write</p>
+              <a class="contact-link section__desc">kontakt@jprojects.pl</a>
+            </div>
           </div>
         </div>
         <div class="section__column2">
-          <form class="form" action="#" method="post">
-            <label class="form__label" for="mail"> Email </label>
+          <form
+            class="form"
+            action="https://formsubmit.io/send/jakubparlej@gmail.com"
+            method="POST"
+          >
+            <label class="form__label" for="email"> Email </label>
             <input
               class="form__input"
-              id="mail"
+              id="email"
               type="email"
-              name="mail"
+              name="email"
               required
             />
             <label class="form__label" for="message">Message</label>
@@ -291,6 +323,10 @@
         </div>
       </section>
     </main>
+    <footer id="footer" class="container footer">
+      <p>&copy 2021 Jakub Parlej. All rights reserved</p>
+      <a class="underline" href="#">Privacy Policy</a>
+    </footer>
     <div id="main"></div>
     <script src="scripts/main.js"></script>
   </body>

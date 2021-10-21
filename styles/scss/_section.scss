@@ -2,10 +2,14 @@
   display: grid;
   grid-template-columns: 100%;
   align-content: flex-start;
-  margin-top: 10rem;
+  padding-top: 5rem;
+  margin-top: 5rem;
+  height: 100%;
 
   @include breakpoint-up(sm) {
     margin-top: 0rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 
   @include breakpoint-up(md) {

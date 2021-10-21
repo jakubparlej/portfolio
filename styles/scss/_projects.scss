@@ -8,8 +8,8 @@
 
 .swiper-button {
   color: $white;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   background-color: $darkTransparent;
   margin-top: 1.5rem;
   border: none;
@@ -19,7 +19,7 @@
   cursor: pointer;
 
   img {
-    width: 1.5rem;
+    width: 2rem;
 
     @include breakpoint-up(md) {
       width: 2.5rem;
