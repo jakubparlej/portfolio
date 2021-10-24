@@ -4,6 +4,31 @@
 
 .swiper-nav {
   display: flex;
+  margin-top: 1.5rem;
+
+  @include breakpoint-up(md) {
+    margin-top: 2rem;
+  }
+}
+
+// .swiper-pagination {
+//   display: flex;
+//   align-items: center;
+//   width: auto;
+//   position: relative;
+//   color: $white;
+//   font-size: 1.25rem;
+//   line-height: 100%;
+//   margin-right: 1.5rem;
+// }
+
+// .swiper-pagination-fraction {
+//   bottom: 0;
+// }
+
+.swiper-slide {
+  background-color: $darkTransparent;
+  width: 80%;
 }
 
 .swiper-button {
@@ -11,7 +36,6 @@
   width: 4rem;
   height: 4rem;
   background-color: $darkTransparent;
-  margin-top: 1.5rem;
   border: none;
   display: grid;
   place-content: center;
@@ -29,7 +53,6 @@
   @include breakpoint-up(md) {
     width: 5rem;
     height: 5rem;
-    margin-top: 2rem;
     margin-right: 1.5rem;
   }
 }
@@ -39,9 +62,14 @@
 
   &__img {
     height: 221px;
-    background: url("../../images/artvideo.png");
-    background-position: top left;
-    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+    transition: background-size 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+      background-size: 105%;
+    }
 
     @include breakpoint-up(md) {
       height: 350px;
@@ -49,11 +77,10 @@
   }
 
   &__desc {
-    background-color: $darkTransparent;
     padding: 2rem 1.5rem;
 
     @include breakpoint-up(md) {
-      padding: 2.25rem 3rem;
+      padding: 3rem 2.5rem;
     }
   }
 
@@ -69,9 +96,9 @@
 
   &__name {
     font-size: 1.5rem;
-    margin-top: 0.5rem;
     line-height: 110%;
     font-weight: 600;
+    margin-top: 0.5rem;
 
     @include breakpoint-up(md) {
       font-size: 2rem;
@@ -102,4 +129,20 @@
       margin-right: 2rem;
     }
   }
+}
+
+// Projects
+
+#podkalickivideo {
+  background: url("../../images/podkalickivideo.png");
+  background-size: 100%;
+}
+
+#kanawka {
+  background: url("../../images/pawelkanawka.jpg");
+  background-size: 100%;
+}
+
+#tesla {
+  background: url("../../images/tesla-clone.jpg");
 }

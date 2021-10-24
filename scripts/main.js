@@ -41,11 +41,44 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
   spaceBetween: 16,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  autoplay: {
+    delay: 5000,
+    pauseOnMouseEnter: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  effect: "coverflow",
+  // centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    modifier: 2,
+    depth: 0,
+  },
+  breakpoints: {
+    // when window width is >= 640px
+    640: {
+      spaceBetween: 32,
+    },
+  },
 
   // Navigation arrows
   navigation: {
     nextEl: "#next",
     prevEl: "#prev",
+  },
+  breakpoints: {
+    // when window width is >= 640px
+    640: {
+      spaceBetween: 32,
+    },
   },
 });
 
