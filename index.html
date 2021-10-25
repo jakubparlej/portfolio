@@ -21,53 +21,54 @@
       src="https://kit.fontawesome.com/4329a56ae7.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 
   <body>
     <header>
       <div class="container header">
-        <a class="header__logo" href="#">
+        <a class="header__logo" href="index.html">
           <img src="images/logo.svg" alt="J-Projects" />
         </a>
         <nav class="nav-mobile">
           <ul class="nav-mobile__list">
             <li class="nav-mobile__item">
-              <a href="#">Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-mobile__item">
-              <a href="#">About me</a>
+              <a href="#about-me">About me</a>
             </li>
             <li class="nav-mobile__item">
-              <a href="#">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li class="nav-mobile__item">
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item underline">
-              <a href="#">Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li class="nav__item underline">
-              <a href="#">About me</a>
+              <a href="#about-me">About me</a>
             </li>
             <li class="nav__item underline">
-              <a href="#">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
           </ul>
         </nav>
-        <a href="#" class="btn hide-for-mobile">Contact</a>
+        <a href="#contact" class="btn hide-for-mobile">Contact</a>
         <a id="menuBtn" class="menu-btn">
           <span></span><span></span><span></span><span></span>
         </a>
       </div>
     </header>
     <main id="root">
-      <section class="container hero">
-        <div class="hero__text">
+      <!-- Hero -->
+
+      <section class="container hero section">
+        <div class="hero__text revealFromBottom">
           <h1>Hello, <br />I'm Jacob</h1>
           <p>
             <strong>Front-End Developer based in Poland</strong><br />I create
@@ -83,10 +84,13 @@
           <img class="jacob" src="images/jacob-test.png" alt="" />
         </div>
       </section>
+
+      <!-- Portfolio -->
+
       <section id="portfolio" class="container section">
-        <div class="section__column1">
+        <div class="section__column1 revealFromBottom">
           <p class="section__title"><span class="line"></span>Portfolio</p>
-          <h2>Check out some of my latest projects</h2>
+          <h2 class="section__header">My latest projects</h2>
           <p class="section__desc">
             Here is my portfolio in which I have included the most important
             projects that I have completed recently.
@@ -106,47 +110,133 @@
             </a>
           </div>
         </div>
-        <div class="section__column2">
+        <div class="section__column2 revealFromRight">
           <!-- Slider main container -->
           <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
+
+              <!-- www.podkalickivideo.pl -->
+
               <div class="swiper-slide">
                 <div class="project">
-                  <div class="project__img" id="podkalickivideo"></div>
-                  <div class="project__desc">
-                    <p class="project__title">www.podkalickivideo.pl</p>
-                    <h3 class="project__name">
-                      Wedding videographer portfolio website
-                    </h3>
-                    <a href="#" class="project__link underline"
-                      >Check out this project</a
+                  <div class="project__img">
+                    <a
+                      href="https://www.behance.net/gallery/121066743/Website-for-wedding-videographer"
+                      target="_blank"
                     >
+                      <img
+                        src="/images/podkalickivideo.png"
+                        alt="Podkalickivideo"
+                      />
+                    </a>
+                  </div>
+                  <div class="project__desc">
+                    <ul class="project__tags">
+                      <li class="project__tag">web design</li>
+                      <li class="project__tag">wordpress</li>
+                    </ul>
+                    <h3 class="project__name">Art-Video portfolio website</h3>
+                    <a
+                      href="https://www.behance.net/gallery/121066743/Website-for-wedding-videographer"
+                      class="project__link underline"
+                      target="_blank"
+                    >
+                      Check out this project
+                    </a>
                   </div>
                 </div>
               </div>
+
+              <!-- www.pawelkanawka.pl -->
+
               <div class="swiper-slide">
                 <div class="project">
-                  <div class="project__img" id="kanawka"></div>
-                  <div class="project__desc">
-                    <p class="project__title">www.pawelkanawka.pl</p>
-                    <h3 class="project__name">
-                      Wedding photographer portfolio website
-                    </h3>
-                    <a href="#" class="project__link underline"
-                      >Check out this project</a
+                  <div class="project__img">
+                    <a
+                      href="https://www.behance.net/gallery/121031399/Website-for-wedding-photographer"
+                      target="_blank"
                     >
+                      <img
+                        src="/images/pawelkanawka.jpg"
+                        alt="www.pawelkanawka.pl"
+                      />
+                    </a>
+                  </div>
+                  <div class="project__desc">
+                    <ul class="project__tags">
+                      <li class="project__tag">web design</li>
+                      <li class="project__tag">wordpress</li>
+                    </ul>
+                    <h3 class="project__name">Paweł Kanawka portfolio website</h3>
+                    <a
+                      href="https://www.behance.net/gallery/121031399/Website-for-wedding-photographer"
+                      target="_blank"
+                      class="project__link underline"
+                    >
+                      Check out this project
+                    </a>
                   </div>
                 </div>
               </div>
+
+              <!-- Tesla website clone -->
+
               <div class="swiper-slide">
                 <div class="project">
-                  <div class="project__img" id="tesla"></div>
+                  <div class="project__img">
+                    <a
+                      href="https://github.com/jakubparlej/tesla-website-clone"
+                      target="_blank"
+                    >
+                      <img
+                        src="images/tesla-clone.jpg"
+                        alt="Tesla website clone"
+                      />
+                    </a>
+                  </div>
                   <div class="project__desc">
-                    <p class="project__title">Web design</p>
+                    <ul class="project__tags">
+                      <li class="project__tag">web design</li>
+                      <li class="project__tag">development</li>
+                    </ul>
                     <h3 class="project__name">Tesla website clone</h3>
-                    <a href="#" class="project__link underline"
+                    <a
+                      href="https://github.com/jakubparlej/tesla-website-clone"
+                      target="_blank"
+                      class="project__link underline"
+                      >Check out this project</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Logofolio -->
+
+              <div class="swiper-slide">
+                <div class="project">
+                  <div class="project__img">
+                    <a
+                      href="https://www.behance.net/gallery/121001331/Logo-Design-Collection"
+                      target="_blank"
+                    >
+                      <img
+                        src="images/logofolio.jpg"
+                        alt="Tesla website clone"
+                      />
+                    </a>
+                  </div>
+                  <div class="project__desc">
+                    <ul class="project__tags">
+                      <li class="project__tag">logo design</li>
+                      <li class="project__tag">branding</li>
+                    </ul>
+                    <h3 class="project__name">Logofolio vol. 1</h3>
+                    <a
+                      href="https://www.behance.net/gallery/121001331/Logo-Design-Collection"
+                      target="_blank"
+                      class="project__link underline"
                       >Check out this project</a
                     >
                   </div>
@@ -165,8 +255,11 @@
           </div>
         </div>
       </section>
+
+      <!-- About me -->
+
       <section id="about-me" class="container section">
-        <div class="section__column1">
+        <div class="section__column1 revealFromBottom">
           <p class="section__title"><span class="line"></span>About me</p>
           <h2>I design and create websites with passion</h2>
           <p class="section__desc">
@@ -182,33 +275,32 @@
           </p>
           <p class="section__desc">More about me:</p>
           <div class="social-icons">
-            <a href="#">
+            <a href="https://www.facebook.com/jprojectspl" target="_blank">
               <i class="fab fa-facebook-f social-icon"></i>
             </a>
-            <a href="#">
+            <a href="https://instagram.com/jprojectspl" target="_blank">
               <i class="fab fa-instagram social-icon"></i>
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/jakubparlej" target="_blank">
               <i class="fab fa-linkedin social-icon"></i>
             </a>
-            <a href="#">
+            <a href="https://behance.net/jprojects" target="_blank">
               <i class="fab fa-behance social-icon"></i>
             </a>
-            <a href="#">
+            <a href="https://dribbble.com/jakubparlej" target="_blank">
               <i class="fab fa-dribbble social-icon"></i>
             </a>
           </div>
         </div>
-        <div class="section__column2">
-          <img
-            style="width: 100%"
-            src="images/working-man.jpg"
-            alt="Working Man"
-          />
+        <div class="section__column2 revealFromRight">
+          <img style="width: 100%" src="images/me.jpg" alt="Working Man" />
         </div>
       </section>
+
+      <!-- Skills and technologies -->
+
       <section id="skills" class="container section">
-        <div class="section__column1">
+        <div class="section__column1 revealFromBottom">
           <p class="section__title">
             <span class="line"></span>Skills & Technologies
           </p>
@@ -220,7 +312,7 @@
             and efficient.
           </p>
         </div>
-        <div class="section__column2">
+        <div class="section__column2 revealFromRight">
           <div class="tech-title">Web development</div>
           <div class="tech-grid">
             <div class="tech" id="html">
@@ -273,9 +365,11 @@
           </div>
         </div>
       </section>
+
       <!-- Contact -->
+
       <section id="contact" class="container section">
-        <div class="section__column1">
+        <div class="section__column1 revealFromBottom">
           <p class="section__title"><span class="line"></span>Contact</p>
           <h2>Let's work together</h2>
           <p class="section__desc">
@@ -295,7 +389,7 @@
             </div>
           </div>
         </div>
-        <div class="section__column2">
+        <div class="section__column2 revealFromRight">
           <form
             class="form"
             action="https://formsubmit.io/send/jakubparlej@gmail.com"
@@ -328,11 +422,13 @@
         </div>
       </section>
     </main>
-    <footer id="footer" class="container footer">
+    <footer id="footer" class="container footer revealFooter">
       <p>&copy 2021 Jakub Parlej. All rights reserved</p>
       <a class="underline" href="#">Privacy Policy</a>
     </footer>
     <div id="main"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

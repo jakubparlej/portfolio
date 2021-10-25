@@ -95,3 +95,50 @@ menuBtn.addEventListener("click", () => {
   header.classList.toggle("header--active");
   body.classList.toggle("no-scroll");
 });
+
+// GSAP ScrollTrigger
+
+const revealFromBottom = gsap.utils.toArray(".revealFromBottom");
+const revealFromRight = gsap.utils.toArray(".revealFromRight");
+
+revealFromBottom.forEach((element) => {
+  gsap.from(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top 70%",
+      ease: "expo",
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+  });
+});
+
+revealFromRight.forEach((element) => {
+  gsap.from(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top 70%",
+      ease: "expo",
+    },
+    x: 100,
+    opacity: 0,
+    duration: 1,
+  });
+});
+
+gsap.from(".footer", {
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "top bottom",
+    ease: "expo",
+  },
+  opacity: 0,
+  duration: 1,
+});
+
+gsap.from(".header", {
+  // y: 50,
+  opacity: 0,
+  duration: 1,
+});

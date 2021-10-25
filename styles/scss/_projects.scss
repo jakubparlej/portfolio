@@ -4,7 +4,7 @@
 
 .swiper-nav {
   display: flex;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
   @include breakpoint-up(md) {
     margin-top: 2rem;
@@ -28,7 +28,11 @@
 
 .swiper-slide {
   background-color: $darkTransparent;
-  width: 80%;
+  width: 90%;
+
+  @include breakpoint-up(md) {
+    width: 80%;
+  }
 }
 
 .swiper-button {
@@ -39,7 +43,7 @@
   border: none;
   display: grid;
   place-content: center;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   cursor: pointer;
 
   img {
@@ -61,14 +65,25 @@
   text-align: left;
 
   &__img {
+    display: block;
+    width: 100%;
     height: 221px;
-    background-position: center;
-    background-size: 100%;
-    transition: background-size 0.3s ease;
     overflow: hidden;
+    cursor: pointer;
 
-    &:hover {
-      background-size: 105%;
+    img {
+      width: 100%;
+      height: 221px;
+      transition: all 0.3s ease;
+      object-fit: cover;
+
+      &:hover {
+        transform: scale(105%);
+      }
+
+      @include breakpoint-up(md) {
+        height: 350px;
+      }
     }
 
     @include breakpoint-up(md) {
@@ -84,10 +99,15 @@
     }
   }
 
-  &__title {
-    font-size: 0.875rem;
-    color: $gray;
+  &__tags {
+    display: flex;
     text-transform: uppercase;
+  }
+
+  &__tag {
+    margin-right: 1rem;
+    font-size: 0.825rem;
+    color: $gray;
 
     @include breakpoint-up(md) {
       font-size: 1rem;
@@ -99,6 +119,7 @@
     line-height: 110%;
     font-weight: 600;
     margin-top: 0.5rem;
+    word-wrap: break-word;
 
     @include breakpoint-up(md) {
       font-size: 2rem;
@@ -110,13 +131,17 @@
     margin-top: 1rem;
 
     @include breakpoint-up(md) {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
   }
 }
 
 .tech-icons {
   margin-top: 2rem;
+
+  img {
+    height: 1.2rem;
+  }
 
   > a {
     opacity: 0.5;
@@ -129,20 +154,4 @@
       margin-right: 2rem;
     }
   }
-}
-
-// Projects
-
-#podkalickivideo {
-  background: url("../../images/podkalickivideo.png");
-  background-size: 100%;
-}
-
-#kanawka {
-  background: url("../../images/pawelkanawka.jpg");
-  background-size: 100%;
-}
-
-#tesla {
-  background: url("../../images/tesla-clone.jpg");
 }
