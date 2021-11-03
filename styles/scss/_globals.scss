@@ -33,10 +33,6 @@ body {
   height: 300vh;
 }
 
-section {
-  height: 100vh;
-}
-
 // Noise effect
 
 #main {
@@ -104,20 +100,22 @@ a:visited {
 
 // Classes
 .container {
-  margin: 0px 2rem;
+  padding: 0 2rem;
   display: flex;
   overflow: hidden;
+  max-width: 1600px;
 
   @include breakpoint-up(sm) {
-    margin: 0px 3rem;
+    margin: 0 auto;
+    padding: 0px 3rem;
   }
 
   @include breakpoint-up(md) {
-    margin: 0px 4rem;
+    padding: 0px 4rem;
   }
 
   @include breakpoint-up(lg) {
-    margin: 0px 5rem;
+    padding: 0px 5rem;
   }
 
   @include breakpoint-up(xl) {
@@ -210,4 +208,50 @@ p {
   opacity: 0;
   visibility: hidden;
   will-change: transform, opacity;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  color: $white;
+  width: 4rem;
+  height: 4rem;
+  background-color: $darkTransparent;
+  border: none;
+  display: grid;
+  opacity: 0;
+  place-content: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+
+  @include breakpoint-up(sm) {
+    right: 3rem;
+  }
+
+  @include breakpoint-up(md) {
+    right: 4rem;
+  }
+
+  @include breakpoint-up(lg) {
+    right: 5rem;
+  }
+
+  @include breakpoint-up(xl) {
+    right: 6rem;
+  }
+
+  img {
+    width: 1.5rem;
+    transform: rotate(180%);
+
+    @include breakpoint-up(md) {
+      width: 2rem;
+    }
+  }
+
+  &--active {
+    opacity: 1;
+  }
 }

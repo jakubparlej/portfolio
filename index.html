@@ -31,29 +31,43 @@
         </a>
         <nav class="nav-mobile">
           <ul class="nav-mobile__list">
-            <li class="nav-mobile__item">
+            <li class="nav-mobile__item home active">
+              <a href="#home">Home</a>
+            </li>
+            <li class="nav-mobile__item portfolio">
               <a href="#portfolio">Portfolio</a>
             </li>
-            <li class="nav-mobile__item">
+            <li class="nav-mobile__item about-me">
               <a href="#about-me">About me</a>
             </li>
-            <li class="nav-mobile__item">
+            <li class="nav-mobile__item skills">
               <a href="#skills">Skills</a>
             </li>
-            <li class="nav-mobile__item">
+            <li class="nav-mobile__item contact">
               <a href="#contact">Contact</a>
             </li>
           </ul>
+          <div class="nav-mobile__contact">
+            <p class="nav-mobile__contact-title">Get in touch</p>
+            <a
+              href="mailto:kontakt@jprojects.pl"
+              class="nav-mobile__contact-name"
+              >kontakt@jprojects.pl</a
+            >
+          </div>
         </nav>
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item underline">
+            <li class="nav__item underline home active">
+              <a href="#home">Home</a>
+            </li>
+            <li class="nav__item underline portfolio">
               <a href="#portfolio">Portfolio</a>
             </li>
-            <li class="nav__item underline">
+            <li class="nav__item underline about-me">
               <a href="#about-me">About me</a>
             </li>
-            <li class="nav__item underline">
+            <li class="nav__item underline skills">
               <a href="#skills">Skills</a>
             </li>
           </ul>
@@ -67,28 +81,31 @@
     <main id="root">
       <!-- Hero -->
 
-      <section class="container hero section">
-        <div class="hero__text revealFromBottom">
-          <h1>Hello, <br />I'm Jacob</h1>
-          <p>
-            <strong>Front-End Developer based in Poland</strong><br />I create
-            modern, high-performance and responsive websites using the latest
-            technology
-          </p>
-          <div class="scroll-icon">
-            <img src="images/arrow-down.svg" alt="" />
-            <a href="#portfolio">See my work</a>
+      <section id="home" class="container hero section">
+        <div class="section__column1">
+          <div class="hero__text revealFromLeft">
+            <h1>Hello, <br />I'm Jacob</h1>
+            <p>
+              <strong>Front-End Developer based in Poland</strong><br />I create
+              modern, high-performance and responsive websites using the latest
+              technology
+            </p>
+            <div class="scroll-icon">
+              <img src="images/arrow-down.svg" alt="" />
+              <a href="#portfolio">See my work</a>
+            </div>
           </div>
         </div>
-        <div class="hero__img">
-          <img class="jacob" src="images/jacob-test.png" alt="" />
+
+        <div class="section__column2">
+          <img class="illustration" src="images/coding.svg" alt="" />
         </div>
       </section>
 
       <!-- Portfolio -->
 
       <section id="portfolio" class="container section">
-        <div class="section__column1 revealFromBottom">
+        <div class="section__column1 revealFromLeft">
           <p class="section__title"><span class="line"></span>Portfolio</p>
           <h2 class="section__header">My latest projects</h2>
           <p class="section__desc">
@@ -110,7 +127,7 @@
             </a>
           </div>
         </div>
-        <div class="section__column2 revealFromRight">
+        <div class="section__column2 revealFromBottom">
           <!-- Slider main container -->
           <div class="swiper">
             <!-- Additional required wrapper -->
@@ -143,7 +160,7 @@
                       class="project__link underline"
                       target="_blank"
                     >
-                      Check out this project
+                      Case study
                     </a>
                   </div>
                 </div>
@@ -177,7 +194,7 @@
                       target="_blank"
                       class="project__link underline"
                     >
-                      Check out this project
+                      Case study
                     </a>
                   </div>
                 </div>
@@ -208,7 +225,7 @@
                       href="https://github.com/jakubparlej/tesla-website-clone"
                       target="_blank"
                       class="project__link underline"
-                      >Check out this project</a
+                      >Case study</a
                     >
                   </div>
                 </div>
@@ -239,7 +256,7 @@
                       href="https://www.behance.net/gallery/121001331/Logo-Design-Collection"
                       target="_blank"
                       class="project__link underline"
-                      >Check out this project</a
+                      >Case study</a
                     >
                   </div>
                 </div>
@@ -261,7 +278,7 @@
       <!-- About me -->
 
       <section id="about-me" class="container section">
-        <div class="section__column1 revealFromBottom">
+        <div class="section__column1 revealFromLeft">
           <p class="section__title"><span class="line"></span>About me</p>
           <h2>I design and create websites with passion</h2>
           <p class="section__desc">
@@ -294,7 +311,7 @@
             </a>
           </div>
         </div>
-        <div class="section__column2 revealFromRight">
+        <div class="section__column2 revealFromBottom">
           <img style="width: 100%" src="images/me.jpg" alt="Working Man" />
         </div>
       </section>
@@ -302,7 +319,7 @@
       <!-- Skills and technologies -->
 
       <section id="skills" class="container section">
-        <div class="section__column1 revealFromBottom">
+        <div class="section__column1 revealFromLeft">
           <p class="section__title">
             <span class="line"></span>Skills & Technologies
           </p>
@@ -314,7 +331,7 @@
             and efficient.
           </p>
         </div>
-        <div class="section__column2 revealFromRight">
+        <div class="section__column2 revealFromBottom">
           <div class="tech-title">Web development</div>
           <div class="tech-grid">
             <div class="tech" id="html">
@@ -371,14 +388,14 @@
       <!-- Contact -->
 
       <section id="contact" class="container section">
-        <div class="section__column1 revealFromBottom">
+        <div class="section__column1 revealFromLeft">
           <p class="section__title"><span class="line"></span>Contact</p>
           <h2>Let's work together</h2>
           <p class="section__desc">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-            nobis, magnam reiciendis enim impedit officiis pariatur nostrum.
-            Necessitatibus sequi et perspiciatis! Tenetur id eveniet doloribus
-            cupiditate animi aut sint amet.
+            If you are interested in my projects and you want to cooperate with
+            me, you can use contact form, write an email or just call me. We
+            will talk about the project, I will prepare a preliminary
+            specification and a non-binding quote.
           </p>
           <div class="contact-links">
             <div class="contact-links__column">
@@ -391,7 +408,7 @@
             </div>
           </div>
         </div>
-        <div class="section__column2 revealFromRight">
+        <div class="section__column2 revealFromBottom">
           <form
             class="form"
             action="https://formsubmit.io/send/jakubparlej@gmail.com"
@@ -428,6 +445,9 @@
       <p>&copy 2021 Jakub Parlej. All rights reserved</p>
       <a class="underline" href="#">Privacy Policy</a>
     </footer>
+    <a href="#home" id="scrollTop" class="scroll-top">
+      <img src="/images/arrow up.svg" alt="" />
+    </a>
     <div id="main"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>

@@ -88,6 +88,9 @@ const menuBtn = document.getElementById("menuBtn");
 const navMobile = document.querySelector(".nav-mobile");
 const header = document.querySelector(".header");
 const body = document.querySelector("body");
+const navMobileLi = document.querySelectorAll(".nav-mobile__item");
+
+console.log(navMobileLi);
 
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("menu-btn--active");
@@ -96,10 +99,19 @@ menuBtn.addEventListener("click", () => {
   body.classList.toggle("no-scroll");
 });
 
+navMobileLi.forEach((item) => {
+  item.addEventListener("click", () => {
+    menuBtn.classList.toggle("menu-btn--active");
+    navMobile.classList.toggle("nav-mobile--active");
+    header.classList.toggle("header--active");
+    body.classList.toggle("no-scroll");
+  });
+});
+
 // GSAP ScrollTrigger
 
 const revealFromBottom = gsap.utils.toArray(".revealFromBottom");
-const revealFromRight = gsap.utils.toArray(".revealFromRight");
+const revealFromLeft = gsap.utils.toArray(".revealFromLeft");
 
 revealFromBottom.forEach((element) => {
   gsap.from(element, {
@@ -114,14 +126,14 @@ revealFromBottom.forEach((element) => {
   });
 });
 
-revealFromRight.forEach((element) => {
+revealFromLeft.forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
       trigger: element,
       start: "top 70%",
       ease: "expo",
     },
-    x: 100,
+    x: -100,
     opacity: 0,
     duration: 1,
   });
@@ -142,3 +154,43 @@ gsap.from(".header", {
   opacity: 0,
   duration: 1,
 });
+
+// Menu items active on scroll
+
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll(".nav__item");
+const navMobileLI = document.querySelectorAll(".nav-mobile__item");
+const scrollTop = document.querySelector(".scroll-top");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.pageYOffset > sectionTop - sectionHeight / 2) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+
+  navMobileLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+
+  if (window.pageYOffset > 200) {
+    scrollTop.classList.add("scroll-top--active");
+  } else {
+    scrollTop.classList.remove("scroll-top--active");
+  }
+});
+
+// Scroll to top button

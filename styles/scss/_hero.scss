@@ -6,7 +6,7 @@
   @include breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
     align-content: center;
-    padding-top: 8rem;
+    padding-top: 7rem;
   }
 
   &__text {
@@ -21,24 +21,24 @@
     }
   }
 
-  &__img {
-    img {
-      width: 80%;
-      position: absolute;
-      top: 45vh;
-      left: 50%;
-      transform: translate(-50%, -50%);
+  // &__img {
+  //   img {
+  //     width: 80%;
+  //     position: absolute;
+  //     top: 45vh;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
 
-      @include breakpoint-up(md) {
-        position: relative;
-        width: 30vw;
-        top: 2rem;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
-    }
-  }
+  //     @include breakpoint-up(md) {
+  //       position: relative;
+  //       width: 30vw;
+  //       top: 2rem;
+  //       bottom: 0;
+  //       left: 50%;
+  //       transform: translate(-50%, 0);
+  //     }
+  //   }
+  // }
 
   p {
     margin-top: 3rem;
@@ -85,7 +85,14 @@
   }
 }
 
-.jacob {
-  top: 50vh;
-  transform: translate(0, -50%);
+.illustration {
+  width: 100%;
+
+  @include breakpoint-down(sm) {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
 }

@@ -64,6 +64,10 @@
 .project {
   text-align: left;
 
+  @include breakpoint-up(md) {
+    max-height: 60vh;
+  }
+
   &__img {
     display: block;
     width: 100%;
