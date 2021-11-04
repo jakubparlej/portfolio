@@ -6,21 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jakub Parlej - Web Developer</title>
     <link rel="shorcut icon" type="image/png" href="images/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="styles/css/main.css" />
     <link
-      href="https://www.dafontfree.net/embed/ZXVyb3N0aWxlLWJvbGQmZGF0YS8yNC9lLzEyMzgzNy9FVVJPU1RJQi50dGY"
       rel="stylesheet"
-      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
     />
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/4329a56ae7.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body>
@@ -97,7 +87,7 @@
           </div>
         </div>
 
-        <div class="section__column2">
+        <div class="section__column2 revealFromBottom">
           <img class="illustration" src="images/coding.svg" alt="" />
         </div>
       </section>
@@ -110,7 +100,7 @@
           <h2 class="section__header">My latest projects</h2>
           <p class="section__desc">
             Here is my portfolio in which I have included the most important
-            projects that I have completed recently.
+            projects that I completed recently.
           </p>
           <p class="section__desc">
             If you want to see all of my projects you can check them out here:
@@ -390,7 +380,7 @@
       <section id="contact" class="container section">
         <div class="section__column1 revealFromLeft">
           <p class="section__title"><span class="line"></span>Contact</p>
-          <h2>Let's work together</h2>
+          <h2>Let's work together!</h2>
           <p class="section__desc">
             If you are interested in my projects and you want to cooperate with
             me, you can use contact form, write an email or just call me. We
@@ -400,18 +390,24 @@
           <div class="contact-links">
             <div class="contact-links__column">
               <p class="contact-links__name">Call</p>
-              <a class="contact-link section__desc">+48 510 602 612</a>
+              <a href="tel:+48510602612" class="contact-link section__desc"
+                >+48 510 602 612</a
+              >
             </div>
             <div class="contact-links__column">
               <p class="contact-links__name">Write</p>
-              <a class="contact-link section__desc">kontakt@jprojects.pl</a>
+              <a
+                href="mailto:kontakt@jprojects.pl"
+                class="contact-link section__desc"
+                >kontakt@jprojects.pl</a
+              >
             </div>
           </div>
         </div>
         <div class="section__column2 revealFromBottom">
           <form
             class="form"
-            action="https://formsubmit.io/send/jakubparlej@gmail.com"
+            action="https://formsubmit.io/send/kontakt@jprojects.pl"
             method="POST"
           >
             <label class="form__label" for="email"> Email </label>
@@ -443,14 +439,23 @@
     </main>
     <footer id="footer" class="container footer revealFooter">
       <p>&copy 2021 Jakub Parlej. All rights reserved</p>
-      <a class="underline" href="#">Privacy Policy</a>
+      <a class="underline" href="/privacy-policy.html">Privacy Policy</a>
     </footer>
     <a href="#home" id="scrollTop" class="scroll-top">
-      <img src="/images/arrow up.svg" alt="" />
+      <img src="images/arrow up.svg" alt="" />
     </a>
     <div id="main"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4329a56ae7.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

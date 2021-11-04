@@ -1,13 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   box-sizing: border-box;
   border-collapse: inherit;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
 }
 
 body,
@@ -30,7 +33,6 @@ html {
 body {
   background-color: $black;
   color: $white;
-  height: 300vh;
 }
 
 // Noise effect
@@ -130,7 +132,7 @@ h1 {
   line-height: 85%;
 
   @include breakpoint-up(lg) {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 700;
   }
 }
@@ -217,7 +219,7 @@ p {
   color: $white;
   width: 4rem;
   height: 4rem;
-  background-color: $darkTransparent;
+  background-color: #222222;
   border: none;
   display: grid;
   opacity: 0;
@@ -227,6 +229,7 @@ p {
   transition: opacity 0.3s ease;
 
   @include breakpoint-up(sm) {
+    bottom: 4rem;
     right: 3rem;
   }
 
@@ -252,6 +255,6 @@ p {
   }
 
   &--active {
-    opacity: 1;
+    opacity: 0.8;
   }
 }

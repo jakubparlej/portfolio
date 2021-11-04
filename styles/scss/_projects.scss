@@ -11,24 +11,10 @@
   }
 }
 
-// .swiper-pagination {
-//   display: flex;
-//   align-items: center;
-//   width: auto;
-//   position: relative;
-//   color: $white;
-//   font-size: 1.25rem;
-//   line-height: 100%;
-//   margin-right: 1.5rem;
-// }
-
-// .swiper-pagination-fraction {
-//   bottom: 0;
-// }
-
 .swiper-slide {
   background-color: $darkTransparent;
   width: 90%;
+  height: auto;
 
   @include breakpoint-up(md) {
     width: 80%;
@@ -63,10 +49,6 @@
 
 .project {
   text-align: left;
-
-  @include breakpoint-up(md) {
-    max-height: 60vh;
-  }
 
   &__img {
     display: block;

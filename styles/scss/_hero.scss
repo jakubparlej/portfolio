@@ -2,11 +2,15 @@
   display: grid;
   grid-template-columns: 1fr;
   align-content: flex-end;
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+  min-height: 100vh;
 
   @include breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
     align-content: center;
-    padding-top: 7rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 
   &__text {
