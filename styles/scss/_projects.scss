@@ -13,11 +13,10 @@
 
 .swiper-slide {
   background-color: $darkTransparent;
-  width: 90%;
-  height: auto;
+  width: 90% !important;
 
   @include breakpoint-up(md) {
-    width: 80%;
+    width: 80% !important;
   }
 }
 
@@ -53,27 +52,22 @@
   &__img {
     display: block;
     width: 100%;
-    height: 221px;
+    max-height: 240px;
     overflow: hidden;
     cursor: pointer;
 
     img {
       width: 100%;
-      height: 221px;
       transition: all 0.3s ease;
-      object-fit: cover;
 
       &:hover {
         transform: scale(105%);
       }
-
-      @include breakpoint-up(md) {
-        height: 350px;
-      }
     }
 
     @include breakpoint-up(md) {
-      height: 350px;
+      height: 18vw;
+      max-height: 375px;
     }
   }
 

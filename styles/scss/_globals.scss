@@ -24,74 +24,11 @@ html {
   font-family: "Poppins";
   box-sizing: border-box;
   scroll-behavior: smooth;
-
-  @include breakpoint-up(md) {
-    // overflow: hidden;
-  }
 }
 
 body {
   background-color: $black;
   color: $white;
-}
-
-// Noise effect
-
-#main {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  position: fixed;
-}
-
-#main::before {
-  top: -10rem;
-  left: -10rem;
-  width: calc(100% + 20rem);
-  height: calc(100% + 20rem);
-  content: "";
-  position: absolute;
-  background-position: 50%;
-  background-image: url("../../images/noise.png");
-  animation: noise 1s steps(2) infinite;
-}
-
-@keyframes noise {
-  0% {
-    transform: translate3d(0, 9rem, 0);
-  }
-  10% {
-    transform: translate3d(-1rem, -4rem, 0);
-  }
-  20% {
-    transform: translate3d(-8rem, 2rem, 0);
-  }
-  30% {
-    transform: translate3d(9rem, -9rem, 0);
-  }
-  40% {
-    transform: translate3d(-2rem, 7rem, 0);
-  }
-  50% {
-    transform: translate3d(-9rem, -4rem, 0);
-  }
-  60% {
-    transform: translate3d(2rem, 6rem, 0);
-  }
-  70% {
-    transform: translate3d(7rem, -8rem, 0);
-  }
-  80% {
-    transform: translate3d(-9rem, 1rem, 0);
-  }
-  90% {
-    transform: translate3d(6rem, -5rem, 0);
-  }
-  to {
-    transform: translate3d(-7rem, 0, 0);
-  }
 }
 
 a,
@@ -126,13 +63,12 @@ a:visited {
 }
 
 h1 {
-  font-size: 5rem;
-  letter-spacing: -5px;
+  font-size: 3.5rem;
   font-weight: 600;
-  line-height: 85%;
+  line-height: 100%;
 
   @include breakpoint-up(lg) {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 700;
   }
 }
