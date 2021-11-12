@@ -4,7 +4,7 @@
   align-content: flex-end;
   padding-top: 10rem;
   padding-bottom: 7rem;
-  min-height: 100vh;
+  // min-height: 100vh;
 
   @include breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
@@ -33,6 +33,7 @@
 
   p {
     margin-top: 2rem;
+    padding-right: 3rem;
   }
 }
 

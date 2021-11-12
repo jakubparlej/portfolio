@@ -168,7 +168,7 @@ h1.title { padding: 4rem 0; font-size: 3rem !important; }
 
 .thank-you a { -ms-flex-item-align: start; align-self: flex-start; width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; margin: 0; }
 
-.hero { display: -ms-grid; display: grid; -ms-grid-columns: 1fr; grid-template-columns: 1fr; -ms-flex-line-pack: end; align-content: flex-end; padding-top: 10rem; padding-bottom: 7rem; min-height: 100vh; }
+.hero { display: -ms-grid; display: grid; -ms-grid-columns: 1fr; grid-template-columns: 1fr; -ms-flex-line-pack: end; align-content: flex-end; padding-top: 10rem; padding-bottom: 7rem; }
 
 @media (min-width: 768px) { .hero { -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; -ms-flex-line-pack: center; align-content: center; padding-top: 10rem; padding-bottom: 10rem; } }
 
@@ -178,7 +178,7 @@ h1.title { padding: 4rem 0; font-size: 3rem !important; }
 
 .hero__title { font-size: 1.5rem; color: #00c65c; margin-bottom: 1rem; }
 
-.hero p { margin-top: 2rem; }
+.hero p { margin-top: 2rem; padding-right: 3rem; }
 
 .scroll-icon { margin-top: 4rem; }
 
@@ -262,11 +262,13 @@ h1.title { padding: 4rem 0; font-size: 3rem !important; }
 
 .tech-title { font-size: 1.25rem; }
 
-.tech-grid { position: relative; width: 100%; display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[3]; grid-template-columns: repeat(3, 1fr); margin-top: 1.5rem; margin-bottom: 2rem; }
+.tech-grid { position: relative; width: 100%; display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[3]; grid-template-columns: repeat(3, 1fr); margin-top: 1.5rem; }
 
 @media (min-width: 992px) { .tech-grid { -ms-grid-columns: (1fr)[4]; grid-template-columns: repeat(4, 1fr); } }
 
 @media (min-width: 1200px) { .tech-grid { -ms-grid-columns: (1fr)[5]; grid-template-columns: repeat(5, 1fr); } }
+
+.technologies-grid { margin-bottom: 5rem; }
 
 .tech { width: 100%; height: auto; display: -ms-grid; display: grid; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 1rem; text-align: center; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; color: #969696; }
 
