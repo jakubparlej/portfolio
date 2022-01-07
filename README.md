@@ -1,5 +1,5 @@
 # J-Projects website (my personal portfolio)
 
-![Screenshot](./preview.png)
+![Screenshot](./jprojects-preview.png)
 
 Visit website [https://jprojects.pl](https://jprojects.pl).
