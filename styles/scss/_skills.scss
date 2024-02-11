@@ -44,6 +44,27 @@
   }
 }
 
+.tech-no-label {
+  width: 100%;
+  height: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: $gray;
+
+  img {
+    height: 4rem;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background-color: $darkTransparent;
+  }
+}
+
 .tech-icon {
   font-size: 3rem;
   margin-bottom: 0.625rem;
@@ -122,4 +143,39 @@
 
 #git:hover {
   color: #f05133;
+}
+
+#typescript {
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0%);
+    color: #2e78c7;
+  }
+}
+
+#nextjs {
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0%);
+    color: #ffffff;
+  }
+}
+
+#reactnative {
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+#strapi {
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0%);
+    color: #5020ff;
+  }
 }
